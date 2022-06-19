@@ -5,29 +5,36 @@ static queue_object** MLF_queues;
 //You can add more global variables here
 
 process* MLF_tick (process* running_process){
-    // TODO
+/**
+ * determine which is the current process to be processed. 
+ * @param running_process the prevously running process
+ * @result a pointer to the new running process (if something changed) or to the previously running process
+ */ 
     return NULL;
 }
 
-/**
+int MLF_startup(){
+    /**
  * Do everything you have to at startup in this function. It is called once.
  * @result 0 if everything was fine. Any other number if there was an error.
  */
-int MLF_startup(){
-    // TODO
     return 1;
 }
 
 process* MLF_new_arrival(process* arriving_process, process* running_process){
-    // TODO
+    /**
+ * Handle new arrivals
+ * @param arriving_process A pointer to a new arriving process
+ * @param running_process A pointer to previously running process
+ * @result A pointer to the new active (running) process (if that changed) or to the previously running process
+ */ 
     return NULL;
 }
 
+void MLF_finish(){
 /**
  * is called once after the all processes were handled. In case you want to cleanup something
  */
-void MLF_finish(){
-    // TODO
 }
 
 
